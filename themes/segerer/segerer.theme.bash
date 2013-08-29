@@ -4,6 +4,9 @@
 # Theme inspired by:
 # * ZSH agnoster theme: https://gist.github.com/agnoster/3712874
 #
+# Use the solarized color scheme:
+#  https://github.com/altercation/solarized
+#
 # IMPORTANT: In all likelihood, you will need to install 
 #   a Powerline-patched font for this theme to render 
 #   correctly. https://gist.github.com/qrush/1595572
