@@ -109,7 +109,12 @@ prompt_status() {
   [[ -n "$symbols" ]] && prompt_segment 'red' 'normal' "$symbols"
 }
 
+prompt_user() {
+	prompt_segment 'white' 'black' "$USER@$HOSTNAME"
+}
+
 build_prompt() {
+	prompt_user
 	prompt_status
 	prompt_dir
 	doubletime_scm_prompt
@@ -118,7 +123,7 @@ build_prompt() {
 
 ## Main prompt
 build_command() {
-  	RETVAL=$?
+	RETVAL=$?
 	PS1="$(build_prompt)"
 }
  
