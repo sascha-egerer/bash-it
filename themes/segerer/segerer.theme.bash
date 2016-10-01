@@ -92,6 +92,12 @@ git_prompt_status() {
   fi
 }
 
+prompt_docker_host() {
+  if [[ -n "$DOCKER_HOST" ]]; then
+    prompt_segment 'blue' 'white' '🐋   $DOCKER_HOST'
+  fi
+}
+
 # Dir: current working directory
 prompt_dir() {
   prompt_segment 'white' 'black' '\w'
@@ -118,6 +124,7 @@ build_prompt() {
 	prompt_status
 	prompt_dir
 	doubletime_scm_prompt
+	prompt_docker_host
 	prompt_end
 }
 
